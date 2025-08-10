@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="probabille.js" defer></script>
+    <title>pAs - Probabilities System</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            font-family: Roboto, sans-serif;
+        }
+        p {
+            font-size: 8px;
+            font-weight: 600;
+            margin: 0;
+        }
+        input {
+            font-size: 8px;
+            outline: none;
+            margin: 0;
+        }
+        .main {
+            width: 375px;
+        }
+        .nav {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 4px;
+            margin: 5px 0px 5px 0px;
+        }
+        .step {
+            margin: 0;
+            background: #d4d4d4;
+            padding: 0px 3px 0px 3px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .step-face {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-bottom: 6px;
+        }
+        .div {
+            margin: 0;
+            display: flex;
+            gap: 5px;
+            cursor: pointer;
+        }
+        .probarea {
+            margin-bottom: 20px;
+        }
+        .probs {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .divhide {
+            font-size: 8px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .org {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+    </style>
+    <div class="main">
+        <div class="nav">
+            <h3>Poker Assistant</h3>
+            <h4>Probabilities System</h4>
+        </div>
+        <div class="probarea">
+            <div class="step-face">
+                <div class="step">Pré-flop</div>
+            </div>
+            <div class="probs">
+                <!-- Probabilidade de que algum dos jogadores tenha uma mão melhor (carta alta, par) -->
+                <div class="div">
+                    <a>check</a>
+                    <div class="divhide">Probabilidade de que algum dos jogadores tenha uma mão melhor (carta alta, par)</div>
+                </div>
+                <!-- Probabilidade de que haja algum dos jogadores tenha um par (carta alta) -->
+                <div class="div">
+                    <a>check</a>
+                    <div class="divhide">Probabilidade de que algum dos jogadores tenha um par (carta alta)</div>
+                </div>
+                <!-- Probabilidade de que algum dos jogadores tenha dois pares ou melhor (par) --><!--Calculado a partir do flop -->
+                <!-- Probabilidade de formar pelo menos um par (carta alta, flop) -->
+                <div class="div">
+                    <a>7.88%</a>
+                    <div class="divhide">Probabilidade de formar pelo menos um par (carta alta, flop)</div>
+                </div>
+                <!-- Probabilidade de formar pelo menos dois pares (par, flop) -->
+                <div class="div">
+                    <a>10.8%</a>
+                    <div class="divhide">Probabilidade de formar pelo menos dois pares (par, flop)</div>
+                </div>
+                <!-- Probabilidade de vitória (carta alta, par) -->
+                <div class="div">
+                    <a>20.5%</a>
+                    <div class="divhide">Probabilidade de vitória (carta alta, par)</div>
+                </div>
+            </div>
+        </div>
+        <div class="inputs">
+            <div class="org">
+                <p>Insira suas cartas</p>
+                <input id="selfcards" type="text" placeholder="ex: ah, 9d">
+            </div>
+            <div class="org">
+                <p>Insira, em caso de flop ou superior, as cartas da mesa</p>
+                <input id="tablecards" type="text" placeholder="ex: ks, 10s, jd">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
