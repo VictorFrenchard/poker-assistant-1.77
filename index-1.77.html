@@ -14,10 +14,10 @@
         </div>
         <div class="probarea">
             <div class="step-face">
-                <div data-status="preflop" class="step">pré-flop</div>
-                <div data-status="flop" class="step">flop</div>
+                <div id="preflopBtn" class="step">pré-flop</div>
+                <div id="flopBtn" class="step">flop</div>
             </div>
-            <div class="probs">
+            <div data-status="preflop" class="probs">
                 <div id="pb0" data-use="all" class="div">
                     <a id="ex_0">check</a>
                     <div class="divhide">Probabilidade de que algum dos jogadores tenha uma mão melhor</div>
@@ -43,20 +43,20 @@
         <div class="inputs">
             <div class="org">
                 <p>Insira o número de jogadores</p>
-                <input id="selfcards" type="text" placeholder="ex: 2 ou 3">
+                <input id="players" type="text" autocomplete="off" placeholder="ex: 2 ou 3">
             </div>
             <div class="org">
                 <p>Insira suas cartas</p>
-                <input id="selfcards" type="text" placeholder="ex: ah, 9d">
+                <input id="selfcards" type="text" autocomplete="off" placeholder="ex: ah, 9d">
             </div>
             <div data-step="flop" class="org">
                 <p>Insira as cartas da mesa</p>
-                <input id="tablecards" type="text" placeholder="ex: ks, 10s, jd">
+                <input id="tablecards" type="text" autocomplete="off" placeholder="ex: ks, 10s, jd">
             </div>
         </div>
         <div class="apply">
             <div class="apply-button">
-                <button class="button">Aplicar</button>
+                <button id="applyBtn" class="button">Aplicar</button>
             </div>
         </div>
     </div>
