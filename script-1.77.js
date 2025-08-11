@@ -10,7 +10,7 @@ const players = document.getElementById("players");
 
 applyBtn.addEventListener("click", () => {
 
-    const test = toCardCode('k', '10');
+    const test = toCardCode('a', 'a');
     const results = calc_preflop_pb0(test.v1, test.v2, 2)
     const relative = relativeProb(results.probability_broot);
     console.log(results)
