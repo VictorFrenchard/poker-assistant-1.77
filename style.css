@@ -1,0 +1,253 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+:root {
+    --color-pattern-0: #d4d4d4;
+    --color-white: #ffff;
+    --color-gray-pattern: #f1f1f1;
+    --color-gray-button: #f8f8f8;
+    --color-gray-hover: #eeeeee;
+    --font-pattern-0: 'Consolas', monospace;
+    --border-radius-pattern-0: 4px;
+    --color-red-pattern: rgb(255, 124, 124);
+}
+
+.margin-pattern-0 {
+    margin-bottom: 6px;
+}
+
+main {
+    width: 850px;
+}
+
+.h1 {
+    font-size: 32px;
+    font-weight: 700;
+    cursor: default;
+}
+
+.title {
+    border-bottom: 1px solid var(--color-pattern-0);
+    text-align: center;
+    padding: 20px 0px 6px 0px;
+    background: var(--color-white);
+    transition: box-shadow 0.2s ease;
+}
+
+.poker-assistant {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 300px;
+}
+
+.nav {
+    height: 97px;
+    width: 850px;
+}
+
+.top {
+    background: transparent;
+    position: fixed;
+    z-index: 1;
+}
+
+.top-info {
+    height: 33px;
+    width: fit-content;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+    border-color: var(--color-pattern-0);
+    transition: box-shadow 0.2s ease;
+    overflow: hidden;
+}
+
+.shadow0-on {
+    box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.2);
+}
+
+.shadow1-on {
+    box-shadow: 0 10px 14px -14px rgba(0, 0, 0, 0.2);
+}
+
+.link {
+    width: 105px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background: var(--color-white);
+}
+
+.link:hover {
+    background: var(--color-gray-pattern);
+}
+
+.poker-table {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 800px;
+    height: 800px;
+    margin-top: 40px;
+}
+
+.adversaries {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.table {
+    height: 170px;
+    width: 100%;
+    background: var(--color-pattern-0);
+}
+
+.identifier {
+    height: 20px;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--color-pattern-0);
+}
+
+.input-pattern-0 {
+    resize: none;
+    outline: none;
+    border: none;
+}
+
+.player-name {
+    line-height: 8px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 5px;
+    font-weight: 600;
+    width: 20ch;
+}
+
+.own {
+    width: 300px;
+    border: 1px solid var(--color-pattern-0);
+    border-radius: var(--border-radius-pattern-0);
+}
+
+.card {
+    height: 106px;
+    width: 75px;
+    background: var(--color-red-pattern);
+    cursor: pointer;
+    border-radius: var(--border-radius-pattern-0);
+}
+
+.hand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 8px;
+}
+
+.background-rules-0 {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*.hidden {
+    background-image: url(/Sources/Cards/card-verso.png);
+}*/
+
+.handtype {
+    padding: 8px 0px 8px 0px;
+}
+
+.type {
+    border: 1px solid var(--color-pattern-0);
+    border-radius: var(--border-radius-pattern-0);
+    margin: 0px 8px 0px 8px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-code-input {
+    padding: 8px;
+    font-size: 15px;
+}
+
+.button {
+    height: 35px;
+    width: 96px;
+    cursor: pointer;
+}
+
+.apply-button {
+    background: var(--color-gray-button);
+}
+
+.apply-button:hover {
+    background: var(--color-gray-hover);
+}
+
+.flex-centralize {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-center-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*.font-rules-0 {
+    font-size: 15px;
+}*/
+
+.font-rules-1 {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.info {
+    height: 30px;
+    border-top: 1px solid var(--color-pattern-0);
+    display: flex;
+    flex-direction: row;
+}
+
+.vertical-line {
+    height: 100%;
+    width: 1px;
+    background: var(--color-pattern-0);
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.border-right-radius {
+    border-top-right-radius: var(--border-radius-pattern-0);
+    border-bottom-right-radius: var(--border-radius-pattern-0);
+}
+
+.border-left-radius {
+    border-top-left-radius: var(--border-radius-pattern-0);
+    border-bottom-left-radius: var(--border-radius-pattern-0);
+}
+
+.border-bottom-radius {
+    border-bottom-right-radius: var(--border-radius-pattern-0);
+    border-bottom-left-radius: var(--border-radius-pattern-0);
+}
+
+.probability {
+    height: 100%;
+    width: 75px;
+    cursor: pointer;
+}

@@ -8,11 +8,12 @@ p {
     font-size: 18px;
     font-weight: 600;
     margin: 0;
+    display: flex;
+    align-items: center;
 }
 
 input {
     font-size: 16px;
-    outline: none;
     margin: 0;
 }
 
@@ -33,15 +34,16 @@ button {
     align-items: center;
     flex-direction: column;
     gap: 4px;
-    margin: 10px 0px 5px 0px;
+    margin: 16px 0px 5px 0px;
 }
 
 .step {
     margin: 0;
     background: #d4d4d4;
-    padding: 3px 5px 3px 5px;
+    padding: 5px 10px 5px 10px;
     font-size: 20px;
     cursor: pointer;
+    border-radius: 6px;
 }
 
 .step-face {
@@ -70,7 +72,7 @@ button {
 }
 
 .divhide {
-    font-size: 18px;
+    font-size: 15px;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -92,6 +94,16 @@ button {
     padding: 4px 8px 4px 8px;
 }
 
-.apply {
+.apply-btn {
     text-align: end;
+    border: 1px solid var(--color-pattern-0); 
+    border-radius: 6px;
+    margin-right: 12px;
+    font-size: 15px;
+    color: #494949;
+}
+
+.area-cards {
+    width: 200px;
+    margin-right: 8px;
 }
