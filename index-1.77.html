@@ -3,56 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <link href="style-1.77.css" rel="stylesheet">
-    <script src="script-1.77.js" defer></script>
+    <script type="module" src="script-1.77.js" defer></script>
     <title>Poker Assistant 1.77</title>
 </head>
 <body>
     <div class="main">
         <div class="nav">
-            <h3>Poker Assistant</h3>
-            <h4>Probabilities System</h4>
+            <h1>Poker Assistant</h1>
+            <h2>Probabilities System</h2>
         </div>
         <div class="probarea">
             <div class="step-face">
-                <div class="step">Pré-flop</div>
+                <div data-status="preflop" class="step">pré-flop</div>
+                <div data-status="flop" class="step">flop</div>
             </div>
             <div class="probs">
-                <!-- Probabilidade de que algum dos jogadores tenha uma mão melhor (carta alta, par) -->
-                <div class="div">
-                    <a>check</a>
-                    <div class="divhide">Probabilidade de que algum dos jogadores tenha uma mão melhor (carta alta, par)</div>
+                <div id="pb0" data-use="all" class="div">
+                    <a id="ex_0">check</a>
+                    <div class="divhide">Probabilidade de que algum dos jogadores tenha uma mão melhor</div>
                 </div>
-                <!-- Probabilidade de que haja algum dos jogadores tenha um par (carta alta) -->
-                <div class="div">
-                    <a>check</a>
-                    <div class="divhide">Probabilidade de que algum dos jogadores tenha um par (carta alta)</div>
+                <div id="pb1" data-use="highcard" class="div">
+                    <a id="ex_1">check</a>
+                    <div class="divhide">Probabilidade de que algum dos jogadores tenha um par</div>
                 </div>
-                <!-- Probabilidade de que algum dos jogadores tenha dois pares ou melhor (par) --><!--Calculado a partir do flop -->
-                <!-- Probabilidade de formar pelo menos um par (carta alta, flop) -->
-                <div class="div">
-                    <a>7.88%</a>
-                    <div class="divhide">Probabilidade de formar pelo menos um par (carta alta, flop)</div>
+                <div id="pb2" data-use="highcard" class="div">
+                    <a id="ex_2">check</a>
+                    <div class="divhide">Probabilidade de formar pelo menos um par no flop</div>
                 </div>
-                <!-- Probabilidade de formar pelo menos dois pares (par, flop) -->
-                <div class="div">
-                    <a>10.8%</a>
-                    <div class="divhide">Probabilidade de formar pelo menos dois pares (par, flop)</div>
+                <div data-id="pb3" data-use="highcard" class="div">
+                    <a id="ex_3">check</a>
+                    <div class="divhide">Probabilidade de formar pelo menos dois pares no flop</div>
                 </div>
-                <!-- Probabilidade de vitória (carta alta, par) -->
-                <div class="div">
-                    <a>20.5%</a>
-                    <div class="divhide">Probabilidade de vitória (carta alta, par)</div>
+                <div data-id="pb4" data-use="all" class="div">
+                    <a id="ex_4">check</a>
+                    <div class="divhide">Classificação geral em %</div>
                 </div>
             </div>
         </div>
         <div class="inputs">
             <div class="org">
+                <p>Insira o número de jogadores</p>
+                <input id="selfcards" type="text" placeholder="ex: 2 ou 3">
+            </div>
+            <div class="org">
                 <p>Insira suas cartas</p>
                 <input id="selfcards" type="text" placeholder="ex: ah, 9d">
             </div>
-            <div class="org">
-                <p>Insira, em caso de flop ou superior, as cartas da mesa</p>
+            <div data-step="flop" class="org">
+                <p>Insira as cartas da mesa</p>
                 <input id="tablecards" type="text" placeholder="ex: ks, 10s, jd">
+            </div>
+        </div>
+        <div class="apply">
+            <div class="apply-button">
+                <button class="button">Aplicar</button>
             </div>
         </div>
     </div>
