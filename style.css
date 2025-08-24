@@ -251,3 +251,20 @@ main {
     width: 75px;
     cursor: pointer;
 }
+
+.card-img {
+    background: url(/poker-assistant-1.77/Sources/standard-52-card-full-deck.png);
+    border: 1px solid var(--color-pattern-0);
+}
+
+/*.cardback-pattern {
+    background-position: 0px 0px;
+    background-size: 1108px 450px;
+}*/
+
+.message {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15px;
+    color: rgb(255, 29, 29);
+}

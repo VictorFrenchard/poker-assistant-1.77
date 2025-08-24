@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link href="style-1.77.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <script type="module" src="code-trs.js" defer></script>
     <script type="module" src="script-1.77.js" defer></script>
     <title>Poker Assistant 1.77</title>
 </head>
@@ -19,19 +20,19 @@
             </div>
             <div data-status="preflop" class="probs">
                 <div id="pb0" data-use="all" class="div">
-                    <a id="ex_0">----%</a>
+                    <a id="ex_0">-------%</a>
                     <div class="divhide">Probabilidade de que algum dos jogadores tenha uma mão melhor.</div>
                 </div>
                 <div id="pb1" data-use="highcard" class="div">
-                    <a id="ex_1">----%</a>
+                    <a id="ex_1">-------%</a>
                     <div class="divhide">Probabilidade de que algum dos jogadores tenha um par.</div>
                 </div>
                 <div data-id="pb2" data-use="highcard" class="div">
-                    <a id="ex_2">----%</a>
+                    <a id="ex_2">-------%</a>
                     <div class="divhide">Probabilidade de que algum dos jogadores tenha cartas de mesmo naipe.</div>
                 </div>
                 <div data-id="pb3" data-use="all" class="div">
-                    <a id="ex_3">----%</a>
+                    <a id="ex_3">-------%</a>
                     <div class="divhide">Classificação geral em %</div>
                 </div>
             </div>
@@ -47,8 +48,8 @@
             </div>
             <div class="area-cards">
                 <div style="padding: 0;" class="hand">
-                    <div id="ad_card_0" class="hidden card no-margin background-rules-0"></div>
-                    <div id="ad_card_1" class="hidden card no-margin background-rules-0"></div>
+                    <div id="ad_card_0" class="hidden card card-img cardback-pattern no-margin background-rules-0"></div>
+                    <div id="ad_card_1" class="hidden card card-img cardback-pattern no-margin background-rules-0"></div>
                 </div>
             </div>
             <div data-step="flop" class="org" style="display: none;">
@@ -56,7 +57,11 @@
                 <input style="height: 19px;" class="input-pattern-0 card-code-input type" id="tablecards" type="text" autocomplete="off" placeholder="ex: ks, 10s, jd">
             </div>
         </div>
-        <div style="height: 26px;" class="apply-button apply-btn button flex-centralize">Aplicar</div>
+        <div style="height: 26px;" class="apply-button apply-btn button flex-centralize" id="applyBtn">Aplicar</div>
+        <br>
+        <div class="message">
+            <div id="alert-mes" class="no-margin"></div>
+        </div>
     </div>
 </body>
 </html>

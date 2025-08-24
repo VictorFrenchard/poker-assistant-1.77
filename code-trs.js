@@ -1,8 +1,8 @@
 import { codePositionX } from "./support-0.js";
 import { codePositionY } from "./support-0.js";
 
-const showcard1 = document.getElementById("showcard1");
-const showcard2 = document.getElementById("showcard2");
+const showcard1 = document.getElementById("ad_card_0");
+const showcard2 = document.getElementById("ad_card_1");
 
 const image_full_width = 1348;
 const image_full_height = 533;
@@ -43,6 +43,4 @@ function toCode(x, y) {
 var posxy = toCode(12, 0);
 
 backgroundSizePosition(posxy);
-
-
 
