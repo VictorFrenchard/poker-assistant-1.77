@@ -1,10 +1,49 @@
 
+export function prepCheck(value) {
+    
+    if (value && value.includes(',') && value.split(',').length >= 2) {
+
+        let format = value.replace(/\s+/g, '');
+        let newd = format.split(',');
+        let c0 = newd[0].split('');
+        let c1 = newd[1].split('');
+
+        return { c0, c1 };
+    }
+}
+
+export function toCardSuit(value0, value1) {
+    const cardSuit = {
+        'H': 1,
+        'D': 2,
+        'C': 3,
+        'S': 4
+    };
+
+    const s1 = cardSuit[value0.toUpperCase()];
+    const s2 = cardSuit[value1.toUpperCase()];
+
+    return {
+        s1, s2
+    }
+
+};
 
 export function toCardCode(value0, value1) {
     const cardValues = {
-    '2': 2, '3': 3, '4': 4, '5': 5,
-    '6': 6, '7': 7, '8': 8, '9': 9,
-    '10': 10, 'J': 11, 'Q': 12, 'K': 13, 'A': 14
+        '2': 2, 
+        '3': 3, 
+        '4': 4, 
+        '5': 5,
+        '6': 6, 
+        '7': 7, 
+        '8': 8, 
+        '9': 9,
+        '10': 10, 
+        'J': 11, 
+        'Q': 12, 
+        'K': 13, 
+        'A': 14
     };
 
     const v1 = cardValues[value0.toUpperCase()];
